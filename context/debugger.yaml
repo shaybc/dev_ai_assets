@@ -1,0 +1,4 @@
+context:
+  - provider: debugger
+    params:
+      stackDepth: 3

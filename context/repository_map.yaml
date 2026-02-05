@@ -1,0 +1,4 @@
+context:
+  - provider: repo-map
+    params:
+      includeSignatures: false # default true
