@@ -1,2 +1,7 @@
+name: @File
+version: 1.0.0
+schema: v1
+description: Reference any file in your current workspace.
+
 context:
   - provider: file

@@ -1,3 +1,8 @@
+name: @Open
+version: 1.0.0
+schema: v1
+description: Reference the contents of all of your open files. Set onlyPinned to true to only reference pinned files.
+
 context:
   - provider: open
     params:
