@@ -1,7 +1,0 @@
-name: @FilterredClipboard
-version: 1.0.0
-schema: v1
-description: Reference recent clipboard items
-
-context:
-  - provider: clipboard
