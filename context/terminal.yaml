@@ -1,4 +1,4 @@
-name: @Terminal
+name: "@Terminal"
 version: 1.0.0
 schema: v1
 description: Reference the last command you ran in your IDE’s terminal and its output.

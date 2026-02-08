@@ -1,4 +1,4 @@
-name: @Clipboard
+name: "@Clipboard"
 version: 1.0.0
 schema: v1
 description: Reference recent clipboard items

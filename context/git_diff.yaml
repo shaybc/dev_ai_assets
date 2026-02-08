@@ -1,4 +1,4 @@
-name: @Git Diff
+name: "@Git Diff"
 version: 1.0.0
 schema: v1
 description: Reference all of the changes you’ve made to your current branch. This is useful if you want to summarize what you’ve done or ask for a general review of your work before committing.

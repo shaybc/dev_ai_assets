@@ -1,4 +1,4 @@
-name: @Problems
+name: "@Problems"
 version: 1.0.0
 schema: v1
 description: Get Problems from the current file.

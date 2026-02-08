@@ -1,4 +1,4 @@
-name: @Current File
+name: "@Current File"
 version: 1.0.0
 schema: v1
 description: Reference the currently open file.

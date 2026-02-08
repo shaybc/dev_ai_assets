@@ -1,4 +1,4 @@
-name: @Operating System
+name: "@Operating System"
 version: 1.0.0
 schema: v1
 description: Reference the architecture and platform of your current operating system.
