@@ -1,9 +1,16 @@
 ---
+invokable: true
 name: Unit test
 description: Generate unit tests for the selected code
-invokable: true
+version: '0.1'
+tags:
+  - back-end team
+  - 'spring,open-shift'
+  - microservices
+  - docker containers
+  - front-end team
+  - angular
 ---
-
 Write a complete unit test suite for the selected code.
 
 Rules:
