@@ -1,9 +1,10 @@
 ---
 alwaysApply: false
 name: Using Flags
+dcc_uri: rules/using_flags
 description: When I'm implementing a new feature
 version: '0.1'
-tags:
+dcc_tags:
   - angular
 ---
 Rule 1: LaunchDarkly Evaluation Must Be Centralized

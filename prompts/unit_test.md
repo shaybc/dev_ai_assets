@@ -1,9 +1,10 @@
 ---
 invokable: true
 name: Unit test
+dcc_uri: prompts/unit_test
 description: Generate unit tests for the selected code
 version: '0.1'
-tags:
+dcc_tags:
   - back-end team
   - 'spring,open-shift'
   - microservices

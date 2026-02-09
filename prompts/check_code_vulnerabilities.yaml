@@ -1,8 +1,9 @@
 name: Check Vulnerabilities
 version: 1.0.0
 schema: v1
+dcc_uri: prompts/check_code_vulnerabilities
 description: check code for vulnerabilities
-tags:
+dcc_tags:
   - back-end team
   - front-end team
 prompts:
