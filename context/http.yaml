@@ -1,6 +1,7 @@
 name: "@HTTP"
 version: 1.0.0
 schema: v1
+dcc_uri: context/http
 description: |
   The HttpContextProvider makes a POST request to the url passed in the configuration.
   The server must return 200 OK with a ContextItem object or an array of ContextItems.

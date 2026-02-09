@@ -1,6 +1,7 @@
 name: "@Code"
 version: 1.0.0
 schema: v1
+dcc_uri: context/code
 description: Reference specific functions or classes from throughout your project.
 
 context:

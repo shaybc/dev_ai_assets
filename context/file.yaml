@@ -1,6 +1,7 @@
 name: "@File"
 version: 1.0.0
 schema: v1
+dcc_uri: context/file
 description: Reference any file in your current workspace.
 
 context:

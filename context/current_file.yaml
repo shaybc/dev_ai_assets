@@ -1,6 +1,7 @@
 name: "@Current File"
 version: 1.0.0
 schema: v1
+dcc_uri: context/current_file
 description: Reference the currently open file.
 
 context:

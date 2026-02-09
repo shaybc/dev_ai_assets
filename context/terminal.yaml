@@ -1,6 +1,7 @@
 name: "@Terminal"
 version: 1.0.0
 schema: v1
+dcc_uri: context/terminal
 description: Reference the last command you ran in your IDE’s terminal and its output.
 
 context:
