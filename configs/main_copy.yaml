@@ -11,10 +11,10 @@ docs:
 mcpServers: []
 name: Main Config_copy
 dcc_uri: configs/main_copy
-version: "1.1"
+version: "1.2"
 schema: v1
 description: this is my test configuration to show that multiple definitions can
-  be bundled into one
+  be bundled into one asdfsadf
 prompts:
   - dcc_use: prompts/check_code_vulnerabilities
   - dcc_use: prompts/unit_test
