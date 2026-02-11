@@ -2,12 +2,12 @@
 alwaysApply: true
 name: Dev Core Rules
 dcc_uri: dev/rules/dev-core-rules
-description: Core development rules for quality, maintainability, testing, and delivery.
-version: '1.0.0'
+description: 'Core development rules for quality, maintainability, testing, and delivery.'
+version: '1.1'
 dcc_tags:
   - dev
+  - node
 ---
-
 # Core development Rules
 These rules apply to all projects (web/mobile/backend/devops etc).
 
