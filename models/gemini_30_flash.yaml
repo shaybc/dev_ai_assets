@@ -1,0 +1,18 @@
+name: Gemini 3.0 Flash via Shim
+dcc_uri: dev/models/gemini_30_flash
+description: DCC server routing to model Gemini 3.0 Flash through an OpenAI-compatible shim.
+version: 1.0.0
+schema: v1
+dcc_tags:
+  - gemini_30_flash
+models:
+  - name: Gemini 3.0 Flash
+    provider: openai
+    model: gemini-3.0-flash
+    apiBase: http://localhost:8080
+    apiKey: 
+    roles:
+      - chat
+      - edit
+      - apply
+      - summarize
