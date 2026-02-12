@@ -1,0 +1,118 @@
+name: Playwright E2E Tests
+version: 0.0.1
+schema: v1
+dcc_uri: dev/prompts/playwright_e2e
+dcc_tags:
+  - front-end
+  - web
+  - angular
+
+prompts:
+  - name: Playwright e2e test
+    description: Scaffold Playwright e2e tests following the project's selector/action/test structure
+    prompt: >-
+      Write Playwright e2e tests for the following feature or flow:
+
+
+      {{{ input }}}
+
+
+      ## Structure
+
+
+      Tests are split into three layers. Always generate all three for the
+      described feature.
+
+
+      **1. Selectors** → `app/tests/_selectors/[Name].selectors.ts`
+
+      Responsible only for locating elements. No actions, no assertions.
+      Use `getByRole`, `getByLabel`, or `getByTestId` exclusively — never CSS
+      selectors or XPath.
+
+      ```ts
+
+      import { Page } from "@playwright/test";
+
+      export class BlockFormSelectors {
+        static readonly getOwnerPersonalRadio = (page: Page) =>
+          page.getByLabel("Personal");
+        static readonly getSlugInput = (page: Page) =>
+          page.getByRole("textbox", { name: "Slug" });
+        static readonly getDescriptionInput = (page: Page) =>
+          page.getByRole("textbox", { name: "Description" });
+      }
+
+      ```
+
+
+      **2. Actions** → `app/tests/_actions/[Name].actions.ts`
+
+      Compose selectors into reusable user flows. No assertions here.
+
+      ```ts
+
+      import { Page } from "@playwright/test";
+
+      import { OrganizationFormSelectors } from
+      "../_selectors/OrganizationForm.selectors";
+
+      import { NavBarSelectors } from "../_selectors/NavBar.selectors";
+
+      export class OrganizationActions {
+        public static createOrganization = async ({
+          page, name, slug, biography,
+        }: {
+          page: Page; name: string; slug: string; biography: string;
+        }) => {
+          await NavBarSelectors.getCreateButton(page).click();
+          await NavBarSelectors.getCreateOrganizationButton(page).click();
+          await OrganizationFormSelectors.getNameInput(page).fill(name);
+          await OrganizationFormSelectors.getSlugInput(page).fill(slug);
+          await OrganizationFormSelectors.getBiographyInput(page).fill(biography);
+          await OrganizationFormSelectors.getCreateOrganizationButton(page).click();
+        };
+      }
+
+      ```
+
+
+      **3. Tests** → `app/tests/[feature].spec.ts`
+
+      Full scenarios using Jest-style `test()`. Assertions live here only.
+
+      ```ts
+
+      test("Can create a new block", async ({ page }) => {
+        const blockSlug = "test-block";
+        await BlockActions.createBlock({
+          page,
+          name: "Test Block",
+          description: "Test block description",
+          slug: blockSlug,
+          rule: "This is a test block rule",
+        });
+        await GlobalActions.expectPath({
+          page,
+          path: ROUTES.PACKAGE({ ownerSlug: TEST_USER_EXPECTED_SLUG, packageSlug: blockSlug }),
+        });
+        await expect(page.getByText("Test Block").first()).toBeVisible();
+        await expect(page.getByText("Test block description")).toBeVisible();
+      });
+
+      ```
+
+
+      ## Rules
+
+      - Selectors locate only — no clicks, fills, or assertions inside a selector class
+
+      - Actions compose selectors into flows — no assertions inside an action class
+
+      - Assertions belong in the test file only
+
+      - If a selector or action class already exists for the relevant page, extend it rather than creating a new one
+
+      - Cover at minimum: happy path + one validation or failure case
+
+      - Use realistic but clearly fake test data — not "test", "aaa", or "123"

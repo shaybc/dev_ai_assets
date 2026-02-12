@@ -1,0 +1,14 @@
+name: Memory MCP
+dcc_uri: dev/mcpservers/memory_mcp
+description: Lightweight MCP server that provides in-memory context storage for Continue, enabling temporary state sharing and short-term memory across agent interactions.
+version: 1.0.0
+schema: v1
+dcc_tags:
+  - memory
+
+mcpServers:
+  - name: Memory
+    command: npx
+    args:
+      - "-y"
+      - "@modelcontextprotocol/server-memory"
