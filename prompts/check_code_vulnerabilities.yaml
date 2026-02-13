@@ -1,11 +1,11 @@
 name: Check Vulnerabilities
-version: 1.0.0
-schema: v1
 dcc_uri: prompts/check_code_vulnerabilities
+version: "1.1"
+schema: v1
 description: check code for vulnerabilities
 dcc_tags:
-  - back-end team
-  - front-end team
+  - backend
+  - frontend
 prompts:
   - prompt: >-
       You are a senior cybersecurity analyst and expert code reviewer
