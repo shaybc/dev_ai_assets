@@ -1,6 +1,6 @@
 name: SwiftUI Docs
 dcc_uri: dev/docs/swiftui_docs
-version: "1.0"
+version: "1.1"
 schema: v1
 description: Official Apple SwiftUI and Swift documentation
 dcc_tags:
@@ -8,6 +8,7 @@ dcc_tags:
   - ios
   - swift
   - swiftui
+  - mobile
 docs:
   - name: SwiftUI
     startUrl: https://developer.apple.com/documentation/swiftui
