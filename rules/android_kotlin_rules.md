@@ -5,13 +5,14 @@ dcc_uri: dev/rules/android_kotlin_rules
 description: >-
   Android development rules for Kotlin and Jetpack Compose (API 26+, Compose BOM
   2024+). Extends core and frontend-core rules.
-version: '1.1'
+version: '1.2'
 dcc_tags:
   - dev
   - frontend
   - android
   - kotlin
   - compose
+  - mobile
 ---
 # Android Kotlin & Compose Rules
 
