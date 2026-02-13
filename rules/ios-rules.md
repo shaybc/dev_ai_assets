@@ -2,16 +2,18 @@
 alwaysApply: false
 name: iOS Swift & SwiftUI Rules
 dcc_uri: dev/rules/ios-rules
-description: iOS development rules for Swift and SwiftUI (iOS 17+). Extends core and frontend-core rules.
-version: '1.0.0'
+description: >-
+  iOS development rules for Swift and SwiftUI (iOS 17+). Extends core and
+  frontend-core rules.
+version: '1.1'
 dcc_tags:
   - dev
   - frontend
   - ios
   - swift
   - swiftui
+  - mobile
 ---
-
 # iOS Swift & SwiftUI Rules (iOS 17+)
 
 These rules apply to all iOS projects and extend the core and frontend-core rules.
