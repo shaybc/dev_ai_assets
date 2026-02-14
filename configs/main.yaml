@@ -1,6 +1,6 @@
-name: Main Config
+name: Test Config
 dcc_uri: dev/configs/main
-version: "1.3"
+version: "1.4"
 schema: v1
 description: this is my test configuration to show that multiple definitions can
   be bundled into one config file
@@ -10,14 +10,14 @@ dcc_tags:
 dcc_config_type: ide
 models: []
 context:
-  - dcc_use: context/file
-  - dcc_use: context/code
-  - dcc_use: context/current_file
+  - dcc_use: dev/context/file
+  - dcc_use: dev/context/code
+  - dcc_use: dev/context/current_file
 rules:
-  - dcc_use: rules/using_flags
+  - dcc_use: dev/rules/using_flags
 prompts:
-  - dcc_use: prompts/check_code_vulnerabilities
-  - dcc_use: prompts/unit_test
+  - dcc_use: dev/prompts/check_code_vulnerabilities
+  - dcc_use: dev/prompts/unit_test
 docs:
-  - dcc_use: docs/continue_docs
+  - dcc_use: dev/docs/continue_docs
 mcpServers: []
