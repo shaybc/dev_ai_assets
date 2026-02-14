@@ -1,7 +1,7 @@
 ---
-name: Composer Rules
-dcc_uri: dev/prompts/composer_rules
-version: '0.1'
+name: Composer Converter
+dcc_uri: dev/prompts/composer_converter
+version: '0.2'
 schema: v1
 description: Converts a WSBCC XML operation definition into a standalone Java program
 dcc_tags:
