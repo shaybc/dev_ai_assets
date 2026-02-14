@@ -1,8 +1,8 @@
 name: Gemini Embeddings via Shim
 dcc_uri: dev/models/gemini_embedding
-description: DCC server routing to model Gemini embeddings through an OpenAI-compatible shim.
-version: 1.0.0
+version: "1.1"
 schema: v1
+description: DCC server routing to model Gemini embeddings through an OpenAI-compatible shim
 dcc_tags:
   - gemini_embedding
 models:
@@ -10,6 +10,5 @@ models:
     provider: openai
     model: text-embedding-004
     apiBase: http://localhost:8080
-    apiKey: 
     roles:
       - embed
