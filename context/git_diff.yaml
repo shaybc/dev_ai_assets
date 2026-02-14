@@ -1,8 +1,10 @@
 name: "@Git Diff"
-version: 1.0.0
+dcc_uri: dev/context/git_diff
+version: "1.1"
 schema: v1
-dcc_uri: context/git_diff
-description: Reference all of the changes you’ve made to your current branch. This is useful if you want to summarize what you’ve done or ask for a general review of your work before committing.
-
+description: Reference all of the changes you’ve made to your current branch.
+  This is useful if you want to summarize what you’ve done or ask for a general
+  review of your work before committing.
+dcc_tags: []
 context:
   - provider: diff
