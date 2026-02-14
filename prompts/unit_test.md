@@ -1,7 +1,7 @@
 ---
 name: Unit test
-dcc_uri: prompts/unit_test
-version: '0.2'
+dcc_uri: dev/prompts/unit_test
+version: '0.3'
 schema: ''
 description: Generate unit tests for the selected code
 dcc_tags:
