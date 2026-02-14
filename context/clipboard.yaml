@@ -1,8 +1,8 @@
 name: "@Clipboard"
-version: 1.0.0
+dcc_uri: dev/context/clipboard
+version: "1.1"
 schema: v1
-dcc_uri: context/clipboard
 description: Reference recent clipboard items
-
+dcc_tags: []
 context:
   - provider: clipboard
