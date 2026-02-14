@@ -1,8 +1,8 @@
 name: "@File"
-version: 1.0.0
+dcc_uri: dev/context/file
+version: "1.1"
 schema: v1
-dcc_uri: context/file
 description: Reference any file in your current workspace.
-
+dcc_tags: []
 context:
   - provider: file
