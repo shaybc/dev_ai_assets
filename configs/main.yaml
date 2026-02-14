@@ -1,6 +1,6 @@
 name: Main Config
-dcc_uri: configs/main
-version: "1.2"
+dcc_uri: dev/configs/main
+version: "1.3"
 schema: v1
 description: this is my test configuration to show that multiple definitions can
   be bundled into one config file
