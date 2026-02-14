@@ -1,26 +1,36 @@
 name: "@HTTP"
-version: 1.0.0
+dcc_uri: dev/context/http
+version: "1.1"
 schema: v1
-dcc_uri: context/http
-description: |
-  The HttpContextProvider makes a POST request to the url passed in the configuration.
-  The server must return 200 OK with a ContextItem object or an array of ContextItems.
+description: >
+  The HttpContextProvider makes a POST request to the url passed in the
+  configuration.
+
+  The server must return 200 OK with a ContextItem object or an array of
+  ContextItems.
+
   The receiving URL should expect to receive the following parameters:
-  
+
+
   POST parameters
+
   ```{  query: string,  fullInput: string}```
-  
+
+
   The response 200 OK should be a JSON object with the following structure:
-  
+
+
   Response:
+
   ```[  {    "name": "",    "description": "",    "content": ""  }]
      // OR
      {  "name": "",  "description": "",  "content": ""}
   ```
-
+dcc_tags: []
 context:
   - provider: http
     params:
-      url: "!<api_url>" # https://api.example.com/v1/users
-      headers:
-        - Authorization: "Bearer !<token>"
+      - key: url
+        value: "!<api_url>"
+      - key: headers
+        value: "[object Object]"
