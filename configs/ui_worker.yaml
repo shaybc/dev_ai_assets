@@ -1,0 +1,42 @@
+name: UI Worker
+dcc_uri: dev/config/ui_worker2
+version: 1.0.0
+schema: v1
+description: this configuration bundles all the UI related prompts, rules and
+  context to allow easier developer-to-AI interaction on UI tasks.
+dcc_tags:
+  - frontend
+  - web
+  - dev
+
+dcc_config_type: ide
+models:
+  - dcc_use: dev/models/gemini_25_flash
+context:
+  - dcc_use: dev/context/clipboard
+  - dcc_use: dev/context/code
+  - dcc_use: dev/context/current_file
+  - dcc_use: dev/context/debugger
+  - dcc_use: dev/context/file
+  - dcc_use: dev/context/open
+  - dcc_use: dev/context/terminal
+rules:
+  - dcc_use: dev/rules/dev-core-rules
+  - dcc_use: sec/rules/csrf-protection
+  - dcc_use: sec/rules/file-upload-validation
+  - dcc_use: sec/rules/jwt-strict-config
+  - dcc_use: sec/rules/no-error-leakage
+  - dcc_use: dev/rules/angular_base_rules
+  - dcc_use: dev/rules/nodejs_rules
+prompts:
+  - dcc_use: dev/prompts/generic_write_test
+  - dcc_use: dev/prompts/playwright_e2e
+  - dcc_use: dev/prompts/fe_angular_codereview
+docs:
+  - dcc_use: dev/docs/angular_docs
+  - dcc_use: dev/docs/nodejs_docs
+mcpServers:
+  - dcc_use: dev/mcpservers/memory_mcp
+  - dcc_use: dev/mcpservers/browsaer_mcp
+  - dcc_use: dev/mcpservers/playwright_mcp
+  - dcc_use: dev/mcpservers/filesystem_mcp
