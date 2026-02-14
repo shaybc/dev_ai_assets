@@ -1,0 +1,39 @@
+name: Composer Converter
+dcc_uri: dev/configs/composer_converter
+version: 1.0.0
+schema: v1
+description: Config that supports converting composer wsbcc xml files into clean
+  native java code.
+dcc_tags:
+  - backend
+  - composer
+  - java
+  - wsbcc
+
+dcc_config_type: ide
+models:
+  - dcc_use: dev/models/gemini_25_flash
+context:
+  - dcc_use: dev/context/code
+  - dcc_use: dev/context/current_file
+  - dcc_use: dev/context/file
+  - dcc_use: dev/context/open
+  - dcc_use: dev/context/terminal
+  - dcc_use: dev/context/debugger
+  - dcc_use: dev/context/problems
+rules:
+  - dcc_use: dev/rules/dev-core-rules
+  - dcc_use: dev/rules/backend_core_rules
+  - dcc_use: dev/rules/backend_java_rules
+  - dcc_use: dev/rules/composer_migration
+prompts:
+  - dcc_use: dev/prompts/composer_converter
+  - dcc_use: dev/prompts/be_java_codereview
+  - dcc_use: dev/prompts/check_code_vulnerabilities
+  - dcc_use: dev/prompts/fix_a_bug
+  - dcc_use: dev/prompts/explain_code
+docs:
+  - dcc_use: dev/docs/java_docs
+mcpServers:
+  - dcc_use: dev/mcpservers/memory_mcp
+  - dcc_use: dev/mcpservers/docker_mcp
