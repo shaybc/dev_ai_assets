@@ -1,8 +1,21 @@
 ---
 name: Conventional Title
 dcc_uri: dev/agents/set_pr_title
-description: Updates PR title to follow conventional commit format
-version: 1.0.0
+description: >-
+  Updates PR title to follow conventional commit format,
+
+  this agent get the current PR and review it's title and content,
+
+  makes sure it is one of: 
+    - New feature
+    - Bug fix
+    - Documentation only
+    - Code refactoring
+    - Build, tooling, configs
+
+  and make sure the title includes a string that represents the PR content (feat
+  / fix / docs / refactor / chore)
+version: '1.1'
 schema: v1
 dcc_definition_type: agent
 dcc_tags:
