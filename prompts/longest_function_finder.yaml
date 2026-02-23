@@ -1,0 +1,37 @@
+name: "Longest Function Finder"
+dcc_uri: dev/prompts/longest_function_finder
+dcc_definition_type: prompt
+version: "1.0.0"
+schema: "v1"
+description: "Scans the codebase to identify and report the longest functions and methods."
+dcc_tags:
+  - codereview
+prompts:
+  - name: Longest Function Finder
+    description: "Scans the codebase to identify and report the longest functions and methods."
+    prompt: >
+      Analyze the provided codebase or the currently open files.
+
+      Your task is to identify the longest functions and methods based on their
+      line count.
+
+
+      For each identified long function or method, report the following details:
+
+      - **Relative Path:** The path to the file containing the function/method,
+      relative to the project root.
+
+      - **Filename:** The name of the file.
+
+      - **Function/Method Name:** The exact name of the function or method.
+
+      - **Line Count:** The total number of lines in the function or method
+      body.
+
+
+      Present the results in a clear, structured list, ordered from longest to
+      shortest.
+
+      If no codebase is provided, ask the user to specify the files or
+      directories to scan.
+invokable: true
