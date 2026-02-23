@@ -1,11 +1,11 @@
 ---
-name: "HTML Duplication Reviewer"
-dcc_uri: dev/agents/html_duplication_reviewer
+name: HTML Duplicate Reviewer
+dcc_uri: dev/agents/html_duplicate_reviewer
 description: >-
   Reviews HTML code to identify duplicate structures or screen elements that
   should be reused, preventing code inconsistencies and bloat.
-version: "1.0.0"
-schema: "v1"
+version: '1.1'
+schema: v1
 dcc_definition_type: agent
 dcc_tags:
   - codereview
