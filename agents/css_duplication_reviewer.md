@@ -1,11 +1,11 @@
 ---
-name: "CSS Duplication Reviewer"
-dcc_uri: dev/agents/css_duplication_reviewer
+name: CSS Duplicate Reviewer
+dcc_uri: dev/agents/css_duplicate_reviewer
 description: >-
   Reviews CSS code to identify duplicate styles or class definitions that should
   be reused, preventing code inconsistencies and bloat.
-version: "1.0.0"
-schema: "v1"
+version: '1.1'
+schema: v1
 dcc_definition_type: agent
 dcc_tags:
   - codereview
