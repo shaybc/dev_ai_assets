@@ -1,10 +1,12 @@
 name: "@Current File"
 dcc_uri: dev/context/current_file
 dcc_definition_type: context
-version: "1.2"
+version: "1.3"
 schema: v1
 description: Reference the currently open file.
 dcc_tags:
   - dev
+  - context
+  - filesystem
 context:
   - provider: currentFile
