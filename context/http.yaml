@@ -1,6 +1,7 @@
 name: "@HTTP"
 dcc_uri: dev/context/http
-version: "1.1"
+dcc_definition_type: context
+version: "1.2"
 schema: v1
 description: >
   The HttpContextProvider makes a POST request to the url passed in the
@@ -26,8 +27,10 @@ description: >
      // OR
      {  "name": "",  "description": "",  "content": ""}
   ```
-dcc_definition_type: context
-dcc_tags: []
+dcc_tags:
+  - http
+  - api
+  - context
 context:
   - provider: http
     params:
