@@ -1,14 +1,13 @@
 name: UI Worker
 dcc_uri: dev/config/ui_worker2
-version: 1.0.0
-schema: v1
-description: this configuration bundles all the UI related prompts, rules and context to allow easier developer-to-AI interaction on UI tasks.
 dcc_definition_type: config
+version: "1.1"
+schema: v1
+description: include only src folder
 dcc_tags:
   - frontend
   - web
   - dev
-
 dcc_config_type: ide
 models:
   - dcc_use: dev/models/gemini_25_flash
@@ -20,6 +19,7 @@ context:
   - dcc_use: dev/context/file
   - dcc_use: dev/context/open
   - dcc_use: dev/context/terminal
+  - dcc_use: dev/context/src
 rules:
   - dcc_use: dev/rules/dev-core-rules
   - dcc_use: sec/rules/csrf-protection
