@@ -1,11 +1,11 @@
 ---
-name: "Large File Finder"
+name: Large File Finder
 dcc_uri: dev/agents/large_file_finder
 description: >-
   Identifies and lists file paths and names for all code files exceeding 500
   lines of code.
-version: "1.0.0"
-schema: "v1"
+version: '1.1'
+schema: v1
 dcc_definition_type: agent
 dcc_tags:
   - codereview
@@ -36,3 +36,6 @@ You are a code analysis agent. Your task is to identify all code files within th
 - Provide the exact line count for each listed file.
 - Ensure the file path is relative to the project root.
 - If no files exceed 500 lines, state "No files found exceeding 500 lines."
+
+
+user: Find all *.js under src with >500 lines. Use a shell command to compute line counts; do not estimate.
