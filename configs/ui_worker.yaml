@@ -1,7 +1,7 @@
-name: Codebase Access
+name: Codebase basic Access
 dcc_uri: dev/config/ui_worker2
 dcc_definition_type: config
-version: "1.4"
+version: "1.5"
 schema: v1
 description: include only src folder
 dcc_tags:
