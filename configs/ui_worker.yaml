@@ -1,16 +1,21 @@
-name: UI Worker
+name: Codebase Access
 dcc_uri: dev/config/ui_worker2
 dcc_definition_type: config
-version: "1.3"
+version: "1.4"
 schema: v1
 description: include only src folder
 dcc_tags:
   - frontend
   - web
   - dev
-dcc_config_type: ide
+dcc_config_type: agents
 models:
   - dcc_use: dev/models/gemini_25_flash
+context:
+  - dcc_use: dev/context/code
+  - dcc_use: dev/context/file
+  - dcc_use: dev/context/terminal
+  - dcc_use: dev/context/tree
 rules: []
 prompts: []
 docs: []
