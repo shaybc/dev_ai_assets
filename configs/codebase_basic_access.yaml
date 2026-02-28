@@ -1,9 +1,9 @@
 name: Codebase basic Access
-dcc_uri: dev/config/ui_worker2
+dcc_uri: dev/config/codebase_basic_access
 dcc_definition_type: config
 version: "1.5"
 schema: v1
-description: include only src folder
+description: supply a basic access to the codebase
 dcc_tags:
   - frontend
   - web

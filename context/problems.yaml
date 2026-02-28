@@ -4,6 +4,8 @@ dcc_definition_type: context
 version: "1.2"
 schema: v1
 description: Get Problems from the current file.
-dcc_tags: []
+dcc_tags:
+  - context
+  - dev
 context:
   - provider: problems
