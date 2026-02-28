@@ -1,7 +1,7 @@
 name: Codebase basic Access
 dcc_uri: dev/config/codebase_basic_access
 dcc_definition_type: config
-version: "1.5"
+version: "1.6"
 schema: v1
 description: supply a basic access to the codebase
 dcc_tags:
@@ -10,7 +10,7 @@ dcc_tags:
   - dev
 dcc_config_type: agents
 models:
-  - dcc_use: dev/models/gemini_25_flash
+  - dcc_use: dev/models/gemini_25_pro
 context:
   - dcc_use: dev/context/code
   - dcc_use: dev/context/file
