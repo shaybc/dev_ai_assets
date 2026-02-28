@@ -4,7 +4,7 @@ dcc_uri: dev/agents/large_file_finder
 description: >-
   Identifies and lists file paths and names for all code files exceeding 500
   lines of code.
-version: '1.2'
+version: '1.3'
 schema: v1
 dcc_definition_type: agent
 dcc_tags:
@@ -32,7 +32,10 @@ You are a code analysis agent. Your task is to identify all code files within th
 
 ## Rules
 
-- Only consider files that are typically considered "code" (e.g., `.js`, `.ts`, `.py`, `.java`, `.cs`, `.go`, `.rb`, `.php`, `.cpp`, `.c`, `.h`, `.hpp`, `.rs`, `.swift`, `.kt`, `.scala`, `.sh`, `.bash`, `.zsh`, `.ps1`, `.psm1`, `.yml`, `.yaml`, `.json`, `.xml`, `.html`, `.css`, `.scss`, `.less`, `.vue`, `.svelte`, `.jsx`, `.tsx`). Exclude common configuration, documentation, or binary files.
+- Only consider files that are typically considered "code" (e.g., `.js`, `.ts`, `.py`, `.java`, `.cs`, `.go`, `.rb`, `.php`, `.cpp`, `.c`, `.h`, `.hpp`, `.rs`, `.swift`, `.kt`, `.scala`, `.sh`, `.bash`, `.zsh`, `.ps1`, `.psm1`, `.yml`, `.yaml`, `.json`, `.xml`, `.html`, `.css`, `.scss`, `.less`, `.vue`, `.svelte`, `.jsx`, `.tsx`).
+- Exclude common configuration, documentation, or binary files.
+- Exclude package folders (like node_modules, .pnpm, .yarn, .pnp.cjs, .pnp.data.json, venv, .venv, __pycache__, site-packages, target, build, .gradle, .settings, .classpath, .project, .vs, Cargo.lock, .cache, .bundle, Pods, Carthage, .build, .idea, .gradle, dist, .vite, .svelte-kit, .nuxt)
+- Exclude whatever is set to .gitignore file (if file exists)
 - Provide the exact line count for each listed file.
 - Ensure the file path is relative to the project root.
 - If no files exceed 500 lines, state "No files found exceeding 500 lines."
