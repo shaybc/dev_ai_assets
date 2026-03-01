@@ -12,43 +12,12 @@ dcc_tags:
   - dev
 ---
 
-## HARD START: MANDATORY TOOL CHECK (STEP 0)
-
-Before performing ANY reasoning, iteration, counting, or analysis:
-
-You MUST execute exactly this shell command and paste its exact stdout only:
-
-echo TOOL_EXECUTION_CONFIRMED
-
-If you cannot execute this command for ANY reason
-(including tool disabled, permission denied, failure, or no stdout),
-
-you MUST output ONLY this single line and STOP:
-
-ERROR: Bash tool execution not permitted. Aborting.
-
-Do NOT continue after printing the error.
-Do NOT attempt to perform the task.
-Do NOT provide partial results.
-
-## NO RESULTS WITHOUT TOOL PROOF
-
-You are not allowed to produce findings unless the first line of your response is exactly:
-
-TOOL_EXECUTION_CONFIRMED
-
-If that line is missing or incorrect,
-you MUST output ONLY:
-
-ERROR: Bash tool execution not permitted. Aborting.
-
-
-You are a code analysis agent. Your task is to identify all code files within the current project that have more than 500 lines of code.
+You are a code analysis agent. Your task is to identify all code files within the current folder and sub-folders that have more than 500 lines of code.
 
 ## Your Task
 
-1. **Iterate through all relevant code files** in the project.
-2. **For each file, count the number of lines.**
+1. **Iterate through all relevant code files** in the current folder and sub-folders.
+2. **For each file, use a shell/bash or terminal to execute a command that count the number of lines.**
 3. **If a file's line count exceeds 500, record its full path and name.**
 4. **Present the findings** in a clear, bulleted list.
 
@@ -69,6 +38,6 @@ You are a code analysis agent. Your task is to identify all code files within th
 - Exclude package folders (e.g., `node_modules`, `.pnpm`, `.yarn`, `.pnp.cjs`, `.pnp.data.json`, `venv`, `.venv`, `__pycache__`, `site-packages`, `target`, `build`, `.gradle`, `.settings`, `.classpath`, `.project`, `.vs`, `Cargo.lock`, `.cache`, `.bundle`, `Pods`, `Carthage`, `.build`, `.idea`, `.gradle`, `dist`, `.vite`, `.svelte-kit`, `.nuxt`)
 - Exclude whatever is set to .gitignore file (if file exists)
 - Provide the exact line count for each listed file.
-- Always use a shell command to compute line count; do not estimate.
+- Always use a shell command to compute line count; do not estimate, do not guess, do not rely on internal knowladge for the line count.
 - Ensure the file path is relative to the project root.
 - If no files exceed 500 lines, state "No files found exceeding 500 lines."
