@@ -3,6 +3,7 @@ name: Interface Design
 dcc_uri: dev/rules/interface-design
 description: Interface design rules for dashboards, admin panels, SaaS apps, and tools. NOT for marketing sites or landing pages.
 version: '1.0.0'
+dcc_definition_type: agent
 dcc_tags:
   - dev
   - frontend
