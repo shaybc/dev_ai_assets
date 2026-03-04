@@ -1,7 +1,7 @@
 name: Frontend Code Reviewer
 dcc_uri: dev/configs/fe_code_reviewer
 dcc_definition_type: config
-version: "1.3"
+version: "1.4"
 schema: v1
 description: Config for agents that do a code review for frontend code
 dcc_tags:
@@ -19,7 +19,8 @@ context:
 rules:
   - dcc_use: dev/rules/dev-core-rules
   - dcc_use: dev/rules/frontend_core_rules
-prompts: []
+prompts:
+  - dcc_use: dev/prompts/commit_message
 docs: []
 mcpServers:
   - dcc_use: dev/mcpservers/playwright_mcp
