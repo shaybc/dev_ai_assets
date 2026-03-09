@@ -1,13 +1,13 @@
 ---
-name: "Accessibility Fix"
+name: Accessibility Fix
 dcc_uri: dev/agents/accessibility_fix
 description: >
   Scans the repository for WCAG accessibility violations, classifies them by
   level and severity, creates or updates structured GitHub issues with
   remediation steps, marks affected code, and generates a compliance summary
-  report.
-version: "1.0.0"
-schema: "v1"
+  report
+version: '1.1'
+schema: v1
 dcc_definition_type: agent
 dcc_tags:
   - accessibility
