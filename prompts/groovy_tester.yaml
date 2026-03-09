@@ -1,0 +1,29 @@
+name: "groovy_tester"
+dcc_uri: dev/prompts/groovy_tester
+dcc_definition_type: prompt
+version: ""
+schema: ""
+description: "this is a prompt that helps developers to test groovy code"
+dcc_tags:
+  - prompt
+prompts:
+  - name: tes
+    description: "testing groovy code"
+    prompt: >-
+      Develop comprehensive unit test code for the provided Groovy code.
+
+      Utilize the Spock Framework for test implementation.
+
+      The tests should meticulously cover:
+
+      1.  All primary functionalities and expected outcomes.
+
+      2.  Critical edge cases and boundary conditions.
+
+      3.  Robust error handling scenarios, if applicable.
+
+      4.  Diverse input variations to ensure stability and correctness.
+
+      The generated test code must be idiomatic Groovy, well-structured, highly
+      readable, and adhere to modern testing best practices.
+invokable: true
