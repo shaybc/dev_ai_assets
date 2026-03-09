@@ -5,8 +5,8 @@ description: >
   Scans the repository for WCAG accessibility violations, classifies them by
   level and severity, creates or updates structured GitHub issues with
   remediation steps, marks affected code, and generates a compliance summary
-  report
-version: '1.1'
+  report.
+version: '1.2'
 schema: v1
 dcc_definition_type: agent
 dcc_tags:
