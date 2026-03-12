@@ -1,0 +1,32 @@
+name: "Frontend Code Reviewer_copy"
+dcc_uri: dev/configs/fe_code_reviewer_copy
+dcc_definition_type: config
+version: "1.4"
+schema: "v1"
+description: "Config for agents that do a code review for frontend code"
+dcc_tags:
+  - codereview
+  - readonly
+  - frontend
+  - gemini_25_flash
+  - code
+  - dev
+  - playwright
+  - browser
+dcc_config_type: agents
+models:
+  - dcc_use: dev/models/gemini_25_flash
+context:
+  - dcc_use: dev/context/code
+  - dcc_use: dev/context/current_file
+  - dcc_use: dev/context/file
+  - dcc_use: dev/context/open
+rules:
+  - dcc_use: dev/rules/dev-core-rules
+  - dcc_use: dev/rules/frontend_core_rules
+prompts:
+  - dcc_use: dev/prompts/commit_message
+docs: []
+mcpServers:
+  - dcc_use: dev/mcpservers/playwright_mcp
+  - dcc_use: dev/mcpservers/browsaer_mcp
